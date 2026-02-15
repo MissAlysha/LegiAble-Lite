@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 280px;
+      padding: 0;
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 16px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .header p {
+      margin: 4px 0 0 0;
+      font-size: 10px;
+      opacity: 0.85;
+      letter-spacing: 0.5px;
+    }
+    .content {
+      padding: 16px;
+    }
+    .toggle-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      margin-bottom: 8px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .toggle-item:hover {
+      background: #e9ecef;
+    }
+    .toggle-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+    .toggle-icon {
+      width: 20px;
+      height: 20px;
+      color: #667eea;
+    }
+    .toggle-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #212529;
+    }
+    .toggle-switch {
+      position: relative;
+      width: 44px;
+      height: 24px;
+    }
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.3s;
+      border-radius: 24px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.3s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #667eea;
+    }
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+    .footer {
+      padding: 10px 16px;
+      background: #f8f9fa;
+      border-top: 1px solid #dee2e6;
+      text-align: center;
+      font-size: 11px;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>LegiAble Lite</h1>
+    <p>Make any webpage easier to read</p>
+  </div>
+  
+  <div class="content">
+    <div class="toggle-item" id="fontToggleContainer">
+      <div class="toggle-info">
+        <svg class="toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+        </svg>
+        <span class="toggle-label">Dyslexic Font</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="fontToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-item" id="rulerToggleContainer">
+      <div class="toggle-info">
+        <svg class="toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+        </svg>
+        <span class="toggle-label">Reading Ruler</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="rulerToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="footer">
+    Works on all websites
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

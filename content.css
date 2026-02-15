@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url(chrome-extension://__MSG_@@extension_id__/opendyslexic.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html.dyslexic-font-enabled,
+html.dyslexic-font-enabled body,
+body.dyslexic-font-enabled,
+body.dyslexic-font-enabled * {
+  font-family: 'OpenDyslexic', sans-serif !important;
+}
+
+#reading-ruler-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2147483647;
+  overflow: hidden;
+}
+
+.ruler-blur-top,
+.ruler-blur-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.4);
+  transition: none;
+}
+
+.ruler-blur-top {
+  top: 0;
+}
+
+.ruler-blur-bottom {
+  bottom: 0;
+  height: 100%;
+}
+
+.ruler-clear-zone {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-top: 2px solid rgba(59, 130, 246, 0.6);
+  border-bottom: 2px solid rgba(59, 130, 246, 0.6);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  transition: none;
+}
