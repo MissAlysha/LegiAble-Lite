@@ -3,6 +3,7 @@ LegiAble Lite is a cognitive accessibility layer for the web.
 Origins
 
 Built initially during a 6-hour hackathon (Top 8/200 participants) in October 2025
+Can be found here: https://legiable.com/ 
 
 Hackathon v0 included:
 	•	OCR image-to-text converter
@@ -21,4 +22,4 @@ So in Jan 2026, I rebuilt it as a Chrome extension focused on:
 
 Current Status
 
-Live on Chrome Web Store:  https://chromewebstore.google.com/detail/eglbmippoagpcmecdpkfmcjgeaifhbpl?utm_source=item-share-cb
+Live on Chrome Web Store: https://chromewebstore.google.com/detail/eglbmippoagpcmecdpkfmcjgeaifhbpl?utm_source=item-share-cb
